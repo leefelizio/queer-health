@@ -1,7 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
 :root {
-  --main-color: #000000;
-  --secondary-color: #00ff00;
   --spacer-lg: 48px;
 }
 
@@ -32,10 +30,6 @@ ion-content, ion-header, ion-footer {
   h1, h2{
     margin: 8px 0;
   }
-}
-
-#main-menu ion-col h3{
-  min-height: var(--spacer-lg);
 }
 
 .img-center{
