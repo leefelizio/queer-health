@@ -18,6 +18,10 @@ ion-content, ion-header, ion-footer {
   color: var(--ion-color-primary);
 }
 
+.text-secondary{
+  color: var(--ion-color-secondary);
+}
+
 .welcome{
   margin: 48px 0 72px 0;
 }
@@ -45,7 +49,6 @@ ion-content, ion-header, ion-footer {
 .transition-all-ease{
   transition: all 0.3s ease;
 }
-
 
 /* Cards */
 ion-card {

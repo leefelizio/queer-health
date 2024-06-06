@@ -2,12 +2,14 @@ import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { Auth, GoogleAuthProvider, signInWithPopup } from '@angular/fire/auth';
 import { Router } from '@angular/router';
-import { IonCard, IonCardHeader, IonAvatar, IonCardTitle, IonCardSubtitle, IonCardContent, IonButton } from '@ionic/angular/standalone';
+import { IonCard, IonCardHeader, IonAvatar, IonCardTitle, IonCardSubtitle, 
+          IonCardContent, IonButton, IonHeader, IonToolbar, IonTitle, IonContent 
+        } from '@ionic/angular/standalone';
 
 @Component({
-  selector: 'app-login-page',
-  templateUrl: './login-page.component.html',
-  styleUrls: ['./login-page.component.scss'],
+  selector: 'app-login',
+  templateUrl: './login.component.html',
+  styleUrls: ['./login.component.scss'],
   standalone: true, 
   imports: [
     CommonModule,
@@ -17,10 +19,11 @@ import { IonCard, IonCardHeader, IonAvatar, IonCardTitle, IonCardSubtitle, IonCa
     IonCardTitle, 
     IonCardSubtitle, 
     IonCardContent, 
-    IonButton 
+    IonButton, 
+    IonHeader, IonToolbar, IonTitle, IonContent
   ]
 })
-export class LoginPageComponent {
+export class LoginComponent {
 
   constructor(
     private readonly _auth: Auth,

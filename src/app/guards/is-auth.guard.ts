@@ -16,7 +16,7 @@ export const isAuthGuard: CanActivateFn = async() => {
   // -- because we want the return to be fast, when the page charges
   // -- redirection below
   if(!await service.isAuth()){
-    router.navigateByUrl('/404');
+    router.navigateByUrl('/login');
   }
   // -- finally returns a Boolean to make it work
   return await service.isAuth() ;

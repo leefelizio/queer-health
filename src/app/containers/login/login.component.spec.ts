@@ -1,7 +1,7 @@
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { IonicModule } from '@ionic/angular';
 
-import { LoginPageComponent } from './login-page.component';
+import { LoginPageComponent } from './login.component';
 
 describe('LoginPageComponent', () => {
   let component: LoginPageComponent;

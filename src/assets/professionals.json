@@ -29,8 +29,8 @@
           "description": "Queer safe.",
           "imageUrl": "",
           "city": {
-            "name": "Geneva",
-            "id" : "2"
+            "name": "Neuchâtel",
+            "id" : "5"
           },          
           "country": "Switzerland",
           "title":"Pascal Moret",
@@ -93,8 +93,8 @@
           "description": "Diplômé en 2019, Dr Maksoud Mahdi, par sa passion pour l'art dentaire et son engagement envers le bien-être de ses patients, a travaillé dans plusieurs cabinets en Suisse, ce qui lui a permis d'acquérir une riche expérience clinique. Pendant trois ans, il a eu la responsabilité d'être chef de clinique dans une Clinique dentaire à Genève, où il a supervisé des équipes et coordonné des traitements complexes.",
           "imageUrl": "",
           "city": {
-            "name": "Geneva",
-            "id" : "1"
+            "name": "Nyon",
+            "id" : "2"
           },
           "country": "Switzerland",
           "title":"Maksoud Mahdi",
@@ -105,10 +105,10 @@
   
         },
         {
-          "description": "Diplômée de la université Libre de Bruxelles en 2009, Dresse Soltana a débuté sa carrière à Bruxelles au sein de cabinets privés de dentisterie générale. De 2015 à 2021, elle a ensuite exercé dans diverses cliniques dentaires à Genève.",
+          "description": "Diplômée de la université Libre de Bruxelles en 2009, Dresse Soltana a débuté sa carrière à Bruxelles au sein de cabinets privés de dentisterie générale. De 2015 à 2021, elle a ensuite exercé dans diverses cliniques dentaires.",
           "imageUrl": "",
           "city": {
-            "name": "Geneva",
+            "name": "Zug",
             "id" : "2"
           },          
           "country": "Switzerland",

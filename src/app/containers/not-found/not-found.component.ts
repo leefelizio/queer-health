@@ -4,9 +4,10 @@ import { ApiService } from '../../services/api.service';
 import { IonHeader, IonToolbar, IonTitle, IonContent, IonItem, IonLabel,
          IonRippleEffect, IonImg, IonThumbnail, IonText, IonSegmentButton,
          IonSegment,IonCard, IonCardHeader, IonCardTitle, IonGrid, IonRow, IonCol,
-         
+         IonCardSubtitle, IonCardContent, IonButton
         } 
         from '@ionic/angular/standalone';
+import { RouterLink } from '@angular/router';
 
 
 @Component({
@@ -31,7 +32,11 @@ import { IonHeader, IonToolbar, IonTitle, IonContent, IonItem, IonLabel,
     IonGrid, 
     IonRow, 
     IonCol,
+    IonCardSubtitle,
+    IonCardContent,
+    IonButton,
     CommonModule,
+    RouterLink
   ],
   templateUrl: './not-found.component.html',
   styleUrl: './not-found.component.scss'
