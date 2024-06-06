@@ -9,9 +9,10 @@ import { IonHeader, IonToolbar, IonTitle, IonContent, IonItem, IonLabel,
         } from '@ionic/angular/standalone'
 import { ApiService } from '../../services/api.service';
 import { FirestoreService } from '../../services/firestore.service';
-import { CommonModule } from '@angular/common';
+import { AsyncPipe, CommonModule } from '@angular/common';
 import { SignInComponent } from '../../sign-in/sign-in.component';
 import { WelcomeComponent } from '../../components/welcome/welcome.component';
+import { IsAuthService } from '../../services/auth.service';
 
 @Component({
   selector: 'app-home',
@@ -41,22 +42,26 @@ import { WelcomeComponent } from '../../components/welcome/welcome.component';
     CommonModule, 
     RouterLink,
     SignInComponent,
-    WelcomeComponent
+    WelcomeComponent,
+    AsyncPipe
   ],
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss'],
 })
-export class Tab1Component {
+export class HomeComponent {
   categories!: any;
 
   constructor(
     apiService: ApiService,
     private readonly _router: Router,
     private readonly _auth: Auth,
+    public _isAuth:IsAuthService    
     ) { 
     // get cats 
     apiService.getData().then((database) => {
       this.categories = database.data;
     });
+
+  
   }
 }

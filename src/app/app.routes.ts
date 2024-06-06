@@ -19,7 +19,7 @@ export const routes: Routes = [
       children: [
         {
           path: 'home',
-          loadComponent: () => import('./containers/home/home.component').then(m => m.Tab1Component)
+          loadComponent: () => import('./containers/home/home.component').then(m => m.HomeComponent)
         },
         {
           path: 'doctors',

@@ -39,22 +39,14 @@ export class FavoritesComponent {
   professional!: any;
   favs$ = this.firestoreService.loadData();
   
-
   constructor(apiService: ApiService, public firestoreService: FirestoreService) { 
-    // get data
     apiService.getData().then((database) => {
        console.log('database', database);
-      // to do a skeleton test, deactivate data below
       this.title = database.title;
       this.categories = database.data;
-
-      // this.city = database.data.find(obj => obj.professionals)
-      // this.selectedCity = database.data[0].professionals[0].city;
       this.selectedCategorie = database.data[0];
-
-      console.log('cat', this.categories)
-      console.log('title', this.title)
-
+      // console.log('category', this.categories);
+      // console.log('title', this.title);
     });
   }
 

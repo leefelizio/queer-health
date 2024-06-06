@@ -66,17 +66,33 @@
           <ion-card class="ion-no-margin">
             <ion-card-header>
                 <div
-                (click)="toggleFavorite(professional);"
+                  *ngIf="(_isAuth.currentUser$|async)"
+                  (click)="toggleFavorite(professional);"
                 > 
-                <ion-icon 
-                  class="clickable transition-all-ease"
-                  aria-label="Add it to my favorites"
-                  [src]="(favs$| async | isFavorite: professional)  ? 'assets/icons/heart.svg' : 'assets/icons/heart-outline.svg'"
-                  width="32"
-                  height="32"
-                >
-                </ion-icon>
-              </div>  <br />
+                  <img
+                    [class]="!(_isAuth.currentUser$|async) ? 'svg' : ''"
+                    aria-label="Add it to my favorites"
+                    [src]="(favs$| async | isFavorite: professional)  ? './assets/icons/gem-heart.png' : 'assets/icons/heart-outline.svg'"
+                    width="32"
+                    height="32"
+                  />
+              </div>  
+              
+              <div
+                *ngIf="!(_isAuth.currentUser$|async)"
+                routerLink="/login"
+              >
+              <img
+                aria-label="Add it to my favorites"
+                class="svg"
+                src="assets/icons/heart-outline.svg"
+                width="32"
+                height="32"
+              />
+
+              </div>
+              
+              <br />
     
               <ion-avatar class="img-center">
                 <img [src]="professional.imageUrl ? professional.imageUrl : './assets/icons/avatar/doctor-man-yellow.png'" alt="{{professional.title}}" width="200px" /> <br/>

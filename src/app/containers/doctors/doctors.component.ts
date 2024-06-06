@@ -1,5 +1,5 @@
-import { Component, EventEmitter, Input, Output } from "@angular/core";
-import { CommonModule } from "@angular/common";
+import { Component } from "@angular/core";
+import { AsyncPipe, CommonModule } from "@angular/common";
 import {
   IonHeader,
   IonToolbar,
@@ -27,10 +27,10 @@ import {
 import { RouterLink } from "@angular/router";
 import { ApiService } from "../../services/api.service";
 import { FilterByCategoryPipe } from "../../pipes/filterByCategoryPipe/filter-by-category.pipe";
-import { FormArray, FormControl, FormGroup, Validators } from "@angular/forms";
 import { FirestoreService } from "../../services/firestore.service";
 import { firstValueFrom } from "rxjs";
 import { IsFavoritePipe } from "../../pipes/isFavorite/is-favorite.pipe";
+import { IsAuthService } from "../../services/auth.service";
 
 @Component({
   selector: "app-doctors",
@@ -62,6 +62,7 @@ import { IsFavoritePipe } from "../../pipes/isFavorite/is-favorite.pipe";
     FilterByCategoryPipe,
     CommonModule,
     IsFavoritePipe,
+    AsyncPipe
   ],
   templateUrl: "./doctors.component.html",
   styleUrls: ["./doctors.component.scss"],
@@ -78,7 +79,8 @@ export class DoctorsComponent {
 
   constructor(
     apiService: ApiService,
-    public firestoreService: FirestoreService
+    public firestoreService: FirestoreService,
+    public _isAuth:IsAuthService
   ) {
     // get data
     apiService.getData().then((database) => {
