@@ -8,6 +8,7 @@ import { IonHeader, IonToolbar, IonTitle, IonContent, IonItem, IonLabel,
         } 
         from '@ionic/angular/standalone';
 import { RouterLink } from '@angular/router';
+import { SignInComponent } from '../../sign-in/sign-in.component';
 
 
 @Component({
@@ -36,7 +37,8 @@ import { RouterLink } from '@angular/router';
     IonCardContent,
     IonButton,
     CommonModule,
-    RouterLink
+    RouterLink, 
+    SignInComponent
   ],
   templateUrl: './not-found.component.html',
   styleUrl: './not-found.component.scss'

@@ -3,8 +3,10 @@ import { Component, OnInit } from '@angular/core';
 import { Auth, GoogleAuthProvider, signInWithPopup } from '@angular/fire/auth';
 import { Router, RouterLink } from '@angular/router';
 import { IonCard, IonCardHeader, IonAvatar, IonCardTitle, IonCardSubtitle, 
-          IonCardContent, IonButton, IonHeader, IonToolbar, IonTitle, IonContent 
+          IonCardContent, IonButton, IonHeader, IonToolbar, IonTitle, 
+          IonContent, IonBackButton
         } from '@ionic/angular/standalone';
+import { SignInComponent } from '../../sign-in/sign-in.component';
 
 @Component({
   selector: 'app-login',
@@ -24,26 +26,13 @@ import { IonCard, IonCardHeader, IonAvatar, IonCardTitle, IonCardSubtitle,
     IonToolbar,
     IonTitle,
     IonContent,
-    RouterLink
+    IonBackButton,
+    RouterLink, 
+    SignInComponent, 
   ]
 })
 export class LoginComponent {
 
-  constructor(
-    private readonly _auth: Auth,
-    private readonly _router: Router
-  ) { }
-
-  async signin() {
-    const provider = new GoogleAuthProvider();
-    const credential = await signInWithPopup(this._auth, provider);
-
-    // search for 'uuid' in log
-     console.log('credential', credential);
-
-    if(credential.user){
-      this._router.navigateByUrl('/favorites')
-    }
-  }
-
+  constructor() { }
+  
 }

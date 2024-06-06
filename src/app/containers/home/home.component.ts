@@ -10,6 +10,8 @@ import { IonHeader, IonToolbar, IonTitle, IonContent, IonItem, IonLabel,
 import { ApiService } from '../../services/api.service';
 import { FirestoreService } from '../../services/firestore.service';
 import { CommonModule } from '@angular/common';
+import { SignInComponent } from '../../sign-in/sign-in.component';
+import { WelcomeComponent } from '../../components/welcome/welcome.component';
 
 @Component({
   selector: 'app-home',
@@ -37,7 +39,9 @@ import { CommonModule } from '@angular/common';
     IonCardContent,
     IonIcon, 
     CommonModule, 
-    RouterLink
+    RouterLink,
+    SignInComponent,
+    WelcomeComponent
   ],
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss'],
@@ -54,17 +58,5 @@ export class Tab1Component {
     apiService.getData().then((database) => {
       this.categories = database.data;
     });
-  }
-
-  async signin() {
-    const provider = new GoogleAuthProvider();
-    const credential = await signInWithPopup(this._auth, provider);
-
-    // search for 'uuid' in log
-     console.log('credential', credential);
-
-    if(credential.user){
-      this._router.navigateByUrl('/favorites')
-    }
   }
 }

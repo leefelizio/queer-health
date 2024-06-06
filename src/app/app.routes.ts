@@ -45,7 +45,7 @@ export const routes: Routes = [
           component: DetailComponent
         }
       ],
-      canActivate: [isAuthGuard],
+      // canActivate: [isAuthGuard],
     },
     {
       path: '404',

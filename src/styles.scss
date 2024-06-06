@@ -58,3 +58,28 @@ ion-card-title {
 ion-card-subtitle {
   --color: #d1fff8;
 }
+
+/* SignInComponent */
+.login-headline{
+  color: var(--ion-color-secondary);
+}
+
+ion-card.login {
+  border-radius: 8px;
+  --background:
+  linear-gradient(90deg, rgba(201,133,47,1) 5%, rgba(245,170,76,1) 48%, rgba(201,133,47,1) 95%);  ;
+  margin-bottom: 82px;
+
+  ion-card-title, ion-card-subtitle  {
+    --color: #1e3351;
+  }
+
+  ion-button{
+    --background: rgba(6,29,63,1);
+    --color: #ecf0f6;
+
+    img {
+      margin-right: 16px;
+    }
+  }
+}

@@ -4,38 +4,15 @@
   </ion-toolbar>
 </ion-header>
 <ion-content class="ion-padding"> 
-  
-  <div class="welcome ion-text-center">
-    <img src="./assets/icons/gem-rainbow.png" width="58px" />
-    <br />
-    <h1 class="text-primary">
-      <strong>
-        QueerHealth
-      </strong> <br /> 
-      Find safe doctors for you.
-    </h1>  
-  </div>
 
-  <h3 class="ion-margin-horizontal"> Login to have all the benefits!</h3>
+  <app-welcome></app-welcome>
 
-  <ion-card class="login ion-text-center">
-    <ion-card-header>
-      <ion-avatar class="img-center">
-        <img alt="Avatar" src="https://ionicframework.com/docs/img/demos/avatar.svg" />
-      </ion-avatar>
-      <ion-card-title>Login with Google</ion-card-title>
-      <ion-card-subtitle>AUTHENTICATION</ion-card-subtitle>
-    </ion-card-header>
-  
-    <ion-card-content>
-      <ion-button (click)="signin()">
-        Login
-      </ion-button>
-    </ion-card-content>
-  </ion-card>
+  <app-sign-in
+    headline="Sign-in to have all the benefits!"  
+  ></app-sign-in>
   
   <h3 class="ion-margin-horizontal">Our latest added doctors</h3>
-  
+
   <ion-grid *ngFor="let cat of categories">
     <ion-row>
       <ion-col
@@ -44,18 +21,19 @@
         size="12"
         *ngFor="let professional of cat.professionals"
         >
+        
         <ion-card class="ion-no-margin">
           <ion-card-header>
             <ion-card-title>{{ professional?.title }}</ion-card-title>
             <ion-card-subtitle>{{ professional?.city?.name | uppercase}}</ion-card-subtitle>
           </ion-card-header>
           <ion-card-content>
-
             <ion-button color="primary" [routerLink]="'/professional/'+professional.uuid" size="small">
               Read More
             </ion-button>
           </ion-card-content>
         </ion-card>
+        
       </ion-col>
    </ion-row>
   </ion-grid>  

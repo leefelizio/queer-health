@@ -3,16 +3,21 @@
 </ion-header>
 
 <ion-content class="ion-padding ion-margin-vertical">
+
+  <div class="welcome-min ion-text-center">
+    <img src="./assets/icons/gem-rainbow.png" width="36px" />
+    <br />
+    <h1 class="text-primary">
+      <strong>
+        {{professional?.title}}
+      </strong>
+    </h1>  
+  </div>
+  
   <ion-avatar class="img-center ion-margin-vertical">
     <img [src]="professional?.imageUrl ? professional?.imageUrl : './assets/icons/avatar/doctor-man-yellow.png'" alt="{{professional?.title}}" /> 
   </ion-avatar>
 
-  <h2 class="ion-text-center">
-    <strong>
-      {{professional?.title}}
-    </strong>
-  </h2>
-  
   <div class="ion-text-center ion-margin-vertical">
     <a href="tel:{{professional?.phone}}">
       <ion-button [style.--background]="'#e3e6ff'">

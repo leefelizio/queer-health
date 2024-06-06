@@ -15,12 +15,11 @@
     </h1>  
   </div>
 
-
   <div *ngFor="let data of favs$ | async" [routerLink]="'/professional/'+data?.favorite?.uuid">
-    <h2 class="ion-text-left ion-padding-horizontal ion-margin-vertical">
-      {{ data?.favorite?.title}}
-    </h2>
-    <ion-card class="ion-margin-vertical">
+    <ion-card class="ion-margin-vertical ion-text-center">
+      <ion-card-header>
+        <ion-card-title>{{ data?.favorite?.title}}</ion-card-title>
+      </ion-card-header>
       <ion-card-content>
         <div class="ion-text-center ion-margin-vertical">
           <a href="tel:{{professional?.phone}}">
