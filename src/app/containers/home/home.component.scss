@@ -1,0 +1,14 @@
+
+/* Cards */
+ion-card.login {
+    border-radius: 8px;
+    --background: #f5aa4c;
+
+  ion-card-title, ion-card-subtitle  {
+    --color: #1e3351;
+  }
+    ion-button{
+    --background: rgba(6,29,63,1);
+    --color: #ecf0f6;
+  }
+}

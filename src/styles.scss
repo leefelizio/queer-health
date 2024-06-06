@@ -1,0 +1,52 @@
+/* You can add global styles to this file, and also import other style files */
+:root {
+  --main-color: #000000;
+  --secondary-color: #00ff00;
+  --spacer-lg: 48px;
+}
+
+ion-thumbnail {
+  --size: 220px;
+  --border-radius: 14px;
+}
+
+ion-content, ion-header, ion-footer {
+  --background: linear-gradient(90deg, rgba(6,29,63,1) 0%, rgba(27,67,80,1) 75%);
+}
+
+#main-menu ion-col h3{
+  min-height: var(--spacer-lg);
+}
+
+.ripple-parent {
+  position: relative;
+  overflow: hidden;
+}
+
+.img-center{
+  margin: 0 auto;
+}
+
+.clickable{
+  cursor: pointer;
+}
+
+.transition-all-ease{
+  transition: all 0.3s ease;
+}
+
+
+/* Cards */
+ion-card {
+  border-radius: 8px;
+  --background: #1e3351;
+  --color: #ecf0f6;
+}
+
+ion-card-title {
+  --color: #ecf0f6;
+}
+
+ion-card-subtitle {
+  --color: #d1fff8;
+}

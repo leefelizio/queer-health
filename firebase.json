@@ -1,0 +1,9 @@
+{
+  "hosting": [
+    {
+      "target": "queer-health",
+      "source": ".",
+      "frameworksBackend": {}
+    }
+  ]
+}

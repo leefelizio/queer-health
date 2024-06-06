@@ -1,0 +1,10 @@
+ion-content{
+    --background: linear-gradient(
+        to right,
+        #f7f0ac,#acf7f0,#f0acf7
+      );
+}
+ion-tab-bar, ion-tab-button{
+    --background: rgba(0, 0, 0, 0.545);
+}
+

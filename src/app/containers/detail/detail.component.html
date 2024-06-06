@@ -1,0 +1,46 @@
+<ion-header>
+  <app-header [title]="professional?.title || ''"></app-header>
+</ion-header>
+
+<ion-content class="ion-padding ion-margin-vertical">
+  <ion-avatar class="img-center ion-margin-vertical">
+    <img [src]="professional?.imageUrl ? professional?.imageUrl : './assets/icons/avatar/doctor-man-yellow.png'" alt="{{professional?.title}}" /> 
+  </ion-avatar>
+
+  <h2 class="ion-text-center">
+    <strong>
+      {{professional?.title}}
+    </strong>
+  </h2>
+  
+  <div class="ion-text-center ion-margin-vertical">
+    <a href="tel:{{professional?.phone}}">
+      <ion-button [style.--background]="'#e3e6ff'">
+        <img src="./assets/icons/call.svg" alt="Phone {{professional?.phone}}" width="24px" /> <br/>
+      </ion-button>
+    </a>
+
+    <a href="mailto:{{professional?.mail}}">
+      <ion-button [style.--background]="'#fff6df'">
+        <img src="./assets/icons/mail.svg" alt="Email {{professional?.mail}}" width="24px" /> <br/>
+      </ion-button>
+    </a>
+
+    <a href="{{professional?.url}}" target="_blank">
+      <ion-button [style.--background]="'#f5f5f6'">
+        <img src="./assets/icons/link.svg" alt="Go to website {{professional?.url}}" width="24px" /> <br/>
+      </ion-button>
+    </a>
+
+    <ion-button (click)="displayShare()" [style.--background]="'#fde2e5'">
+      <img src="./assets/icons/share.svg" alt="Share" width="24px" /> <br/>
+    </ion-button>
+  </div>
+
+  <h4 class="ion-text-center ion-margin-vertical">About</h4>
+  <p class="ion-margin-vertical ion-padding-vertical">
+    {{professional?.description}}
+  </p>  <br />
+
+</ion-content>
+

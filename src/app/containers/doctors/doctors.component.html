@@ -1,0 +1,85 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>List of doctors</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content class="ion-padding"> 
+
+<h4>Filter doctors by specialty</h4>
+ <ion-segment>
+  <ion-segment-button *ngFor="let cat of categories" (click)="selectedCategorie = cat;">
+    <ion-label [color]="selectedCategorie.title === cat.title ? 'primary' : ''">
+      {{ cat.title }}
+    </ion-label>
+  </ion-segment-button>
+</ion-segment>
+
+<ion-list>
+  <ion-item>
+    <ion-select label="Specialty" placeholder="City" [multiple]="true">
+      <ion-select-option 
+        *ngFor="let cat of categories" 
+        [value]="cat.title">
+        {{ cat.title }}
+      </ion-select-option>
+    </ion-select>
+  </ion-item>
+</ion-list>
+
+<h4> Filter doctors by city</h4>
+<ion-list>
+  <ion-item>
+    <ion-select label="City" placeholder="City" [multiple]="true">
+      <ion-select-option 
+        [value]="city">
+        <!-- {{professional.city}} -->
+      </ion-select-option>
+    </ion-select>
+  </ion-item>
+</ion-list>
+
+<div *ngIf="categories">
+  <ion-grid *ngFor="let cat of categories | filterByCategory : selectedCategorie">
+    <ion-row>
+      <ion-col
+        class="ion-text-center ion-margin-vertical"
+        size-lg="4"
+        size="12"
+        *ngFor="let professional of cat.professionals"
+        >
+        <ion-card>
+          <ion-card-header>
+              <div
+              (click)="toggleFavorite(professional);"
+              > 
+              <ion-icon 
+                class="clickable transition-all-ease"
+                aria-label="Add it to my favorites"
+                [src]="(favs$| async | isFavorite: professional)  ? 'assets/icons/heart.svg' : 'assets/icons/heart-outline.svg'"
+                width="32"
+                height="32"
+              >
+              </ion-icon>
+            </div>  <br />
+  
+            <ion-avatar class="img-center">
+              <img [src]="professional.imageUrl ? professional.imageUrl : './assets/icons/avatar/doctor-man-yellow.png'" alt="{{professional.title}}" width="200px" /> <br/>
+            </ion-avatar> <br />
+            <ion-card-title>{{ professional.title }}</ion-card-title>
+            <ion-card-subtitle>{{ professional.city.name | uppercase}}</ion-card-subtitle>
+          </ion-card-header>
+          <ion-card-content>
+  
+            <ion-button color="primary" [routerLink]="'/professional/'+professional.uuid" size="small">
+              Read More
+            </ion-button>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+   </ion-row>
+  </ion-grid>  
+</div>
+
+</ion-content>
+
+

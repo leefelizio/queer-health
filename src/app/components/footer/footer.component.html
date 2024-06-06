@@ -1,0 +1,11 @@
+<ion-footer [translucent]="true">
+  <ion-toolbar>
+    <ion-button 
+      [disabled]="!isValid"
+      (click)="addNow.emit(value); firestoreService.addData(value)"
+    >
+      Add
+    </ion-button>
+
+  </ion-toolbar>
+</ion-footer>

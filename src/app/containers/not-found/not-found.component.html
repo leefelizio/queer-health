@@ -1,0 +1,74 @@
+<ion-header [translucent]="true">
+    <ion-toolbar>
+      <ion-title>Not Found</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content class="ion-padding"> 
+
+    <h2>
+        <strong>
+           The page you requested doesn't exists.
+        </strong>
+    </h2>
+
+  
+    <div class="sub-title">
+      <strong slot="start">Specialties</strong>
+    </div>
+  
+    <div class="list-doctors">
+
+    <!-- TODO SLIDER WITH CATEGORIES -->
+
+    <ion-grid>
+        <ion-row>
+          <ion-col size="4" size-sm="2" *ngFor="let cat of categories">
+            <ion-card>
+                <ion-card-header>
+                    <img src="./assets/icons/categories/{{cat.title|lowercase}}.png" alt="{{cat.title}}" width="40px" /> <br/>
+                  <ion-text> 
+                    <strong>
+                        {{ cat.title|uppercase}}
+                    </strong>
+                </ion-text>
+                </ion-card-header>
+            </ion-card>    
+    
+            </ion-col>
+        </ion-row>
+      </ion-grid>
+
+        
+        <!-- NG FOR WITH CATEGORIES -->
+        <ion-segment *ngIf="categories">
+            <ion-segment-button *ngFor="let cat of categories">
+            <ion-label>
+                {{ cat.title }}
+            </ion-label>
+            </ion-segment-button>
+        </ion-segment>
+
+        <ion-item lines="none" class="ion-activatable ripple-parent">
+            <ion-ripple-effect></ion-ripple-effect>
+
+            <ion-thumbnail slot="start">
+                <ion-img src="./assets/icons/doctor-man-yellow.png" class="doctor-avatar"></ion-img>
+            </ion-thumbnail>
+
+            <ion-label class="ion-text-wrap">
+                <p> speclialty </p>
+                <ion-text>
+                <h3>
+                    <strong>
+                    name
+                    </strong>
+                </h3>
+                </ion-text>
+            </ion-label>
+
+            <ion-img src="./assets/icons/ellipsis-vertical-outline.svg"></ion-img>
+
+     </ion-item>
+    </div>
+  
+  </ion-content>

@@ -1,0 +1,58 @@
+<ion-content slot="start">
+
+  <ion-card-title class="ion-text-center ion-margin-vertical"> Welcome to QueerHealth </ion-card-title>
+
+  <ion-card class="ion-text-center">
+    <ion-card-header>
+      <ion-avatar class="img-center">
+        <img alt="Avatar" src="https://ionicframework.com/docs/img/demos/avatar.svg" />
+      </ion-avatar>
+      <ion-card-title>Login with Google</ion-card-title>
+      <ion-card-subtitle>GoogleAuth</ion-card-subtitle>
+    </ion-card-header>
+  
+    <ion-card-content>
+      <ion-button (click)="signin()">
+        Login
+      </ion-button>
+    </ion-card-content>
+  </ion-card>
+  <ion-tabs>
+    
+    <ion-tab-bar slot="bottom">
+      <ion-tab-button tab="home">
+        <ion-icon 
+          class="clickable transition-all-ease"
+          aria-label="Go to home"
+          src="assets/icons/home.svg"
+          width="32"
+          height="32"
+        ></ion-icon>      
+        Home
+      </ion-tab-button>
+  
+      <ion-tab-button tab="doctors">
+        <ion-icon 
+          class="clickable transition-all-ease"
+          aria-label="Go to list of doctors"
+          src="assets/icons/list.svg"
+          width="32"
+          height="32"
+        ></ion-icon>     
+        Doctors  
+      </ion-tab-button>
+  
+      <ion-tab-button tab="favorites">
+        <ion-icon 
+          class="clickable transition-all-ease"
+          aria-label="Go to favorites"
+          src="assets/icons/heart.svg"
+          width="32"
+          height="32"
+        ></ion-icon>     
+        Favorites  
+      </ion-tab-button>
+    </ion-tab-bar>
+  
+  </ion-tabs>
+</ion-content>

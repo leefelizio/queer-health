@@ -1,0 +1,124 @@
+{
+  "title": "QueerHealth App",
+  "data": [
+    {
+      "itemUuids": [
+        "4b6b6d4a-edc7-44be-b15b-251cd664ecfd",
+        "7c019456-f219-4efb-8df9-84e34f36f90b"
+      ],
+      "title": "Psychologist",
+      "uuid": "01489fc9-0be3-424e-a276-33e393062072",
+      "displayType": null,
+      "professionals": [
+        {
+          "description": "Special psychologist in psychotherapy FSP / federal. CBT-oriented psychotherapy (cognitive and behavioral techniques) in French, English or Spanish. Use of specific methods depending on the situation such as EMDR, dialectical behavior therapy (DBT) or clarification-focused therapy (COP). Diagnostic Evaluation.",
+          "imageUrl": "",
+          "city": {
+            "name": "Lausanne",
+            "id" : "1"
+          },
+          "country": "Switzerland",
+          "title":"Theo Païs",
+          "phone": "+41 00 99987362",
+          "mail" : "example@mail.com",
+          "url":"https://www.google.com",
+          "uuid": "4b6b6d4a-edc7-44be-b15b-251cd664ecfd"
+
+        },
+        {
+          "description": "Queer safe.",
+          "imageUrl": "",
+          "city": {
+            "name": "Geneva",
+            "id" : "2"
+          },          
+          "country": "Switzerland",
+          "title":"Pascal Moret",
+          "phone": "+41 00 99987362",
+          "mail" : "example@mail.com",
+          "url":"https://www.google.com",
+          "uuid": "7c019456-f219-4efb-8df9-84e34f36f90b"
+        }
+      ]
+    },
+    {
+      "itemUuids": [
+        "8d713400-0a36-42ab-9ef6-0c718bdad157",
+        "a67d3005-02ae-4320-afc9-638ca74c0c40"
+      ],
+      "title": "Endocrinologist",
+      "uuid": "08abc67f-7066-49c3-a23e-cd64c25fde19",
+      "displayType": null,
+      "professionals": [
+        {
+          "description": "Works in a queer safe health organisation. ",
+          "imageUrl": "",
+          "city": {
+            "name": "Zurich",
+            "id" : "3"
+          },          
+          "country": "Switzerland",
+          "title":"Hadrien K.",
+          "phone": "+41 00 99987362",
+          "mail" : "example@mail.com",
+          "url":"https://www.google.com",
+          "uuid": "8d713400-0a36-42ab-9ef6-0c718bdad157"
+        },
+        {
+          "description": "Queer safe.",
+          "imageUrl": "",
+          "city": {
+            "name": "Bern",
+            "id" : "4"
+          },          
+          "country": "Switzerland",
+          "title":"Albert T.",
+          "phone": "+41 00 99987362",
+          "mail" : "example@mail.com",
+          "url":"https://www.google.com",
+          "uuid": "a67d3005-02ae-4320-afc9-638ca74c0c40"
+        }
+      ]
+    },
+    {
+      "itemUuids": [
+        "4c2ad3ed-5fbb-54a6-8b84-eb0a3e309568",
+        "b2cafc90-439e-4354-9688-4a9e8385a0c0"
+      ],
+      "title": "Dentist",
+      "uuid": "63e65bc7-b761-442d-bb42-f09e5843c422",
+      "displayType": null,
+      "professionals": [
+        {
+          "description": "Diplômé en 2019, Dr Maksoud Mahdi, par sa passion pour l'art dentaire et son engagement envers le bien-être de ses patients, a travaillé dans plusieurs cabinets en Suisse, ce qui lui a permis d'acquérir une riche expérience clinique. Pendant trois ans, il a eu la responsabilité d'être chef de clinique dans une Clinique dentaire à Genève, où il a supervisé des équipes et coordonné des traitements complexes.",
+          "imageUrl": "",
+          "city": {
+            "name": "Geneva",
+            "id" : "1"
+          },
+          "country": "Switzerland",
+          "title":"Maksoud Mahdi",
+          "phone": "+41 00 99987362",
+          "mail" : "example@mail.com",
+          "url":"https://www.google.com",
+          "uuid": "4c2ad3ed-5fbb-54a6-8b84-eb0a3e309568"
+  
+        },
+        {
+          "description": "Diplômée de la université Libre de Bruxelles en 2009, Dresse Soltana a débuté sa carrière à Bruxelles au sein de cabinets privés de dentisterie générale. De 2015 à 2021, elle a ensuite exercé dans diverses cliniques dentaires à Genève.",
+          "imageUrl": "",
+          "city": {
+            "name": "Geneva",
+            "id" : "2"
+          },          
+          "country": "Switzerland",
+          "title":"Wafa Soltana",
+          "phone": "+41 00 99987362",
+          "mail" : "example@mail.com",
+          "url":"https://www.google.com",
+          "uuid": "b2cafc90-439e-4354-9688-4a9e8385a0c0"
+        }
+      ]
+    }
+  ]
+}
