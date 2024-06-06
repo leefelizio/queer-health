@@ -14,13 +14,24 @@ ion-content, ion-header, ion-footer {
   --background: linear-gradient(90deg, rgba(6,29,63,1) 0%, rgba(27,67,80,1) 75%);
 }
 
-#main-menu ion-col h3{
-  min-height: var(--spacer-lg);
+.text-primary{
+  color: var(--ion-color-primary);
 }
 
-.ripple-parent {
-  position: relative;
-  overflow: hidden;
+.welcome{
+  margin: 48px 0 72px 0;
+}
+
+.welcome-min{
+  margin: 8px 0 26px 0;
+
+  h1, h2{
+    margin: 8px 0;
+  }
+}
+
+#main-menu ion-col h3{
+  min-height: var(--spacer-lg);
 }
 
 .img-center{

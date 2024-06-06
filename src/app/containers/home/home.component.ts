@@ -63,8 +63,6 @@ export class Tab1Component {
     // search for 'uuid' in log
      console.log('credential', credential);
 
-    // if there is user credential, when login
-    // redirects to page Favorites
     if(credential.user){
       this._router.navigateByUrl('/favorites')
     }

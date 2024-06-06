@@ -28,13 +28,10 @@ export class TabsComponent {
     const provider = new GoogleAuthProvider();
     const credential = await signInWithPopup(this._auth, provider);
 
-    // search for 'uuid' in log
-     console.log('credential', credential);
+     console.log('credential tabs comp', credential);
 
-    // if there is user credential, when login
-    // redirects to defined path
     if(credential.user){
-      this._router.navigateByUrl('/tabs-1')
+      this._router.navigateByUrl('/favorites')
     }
   }
 

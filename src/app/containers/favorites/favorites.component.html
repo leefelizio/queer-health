@@ -3,7 +3,18 @@
     <ion-title>Favorites</ion-title>
   </ion-toolbar>
 </ion-header>
-<ion-content class="ion-text-center">
+<ion-content class="ion-padding">
+
+  <div class="welcome-min ion-text-center">
+    <img src="./assets/icons/gem-rainbow.png" width="36px" />
+    <br />
+    <h1 class="text-primary">
+      <strong>
+        Favorites
+      </strong>
+    </h1>  
+  </div>
+
 
   <div *ngFor="let data of favs$ | async" [routerLink]="'/professional/'+data?.favorite?.uuid">
     <h2 class="ion-text-left ion-padding-horizontal ion-margin-vertical">

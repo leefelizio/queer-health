@@ -5,15 +5,18 @@
 </ion-header>
 <ion-content class="ion-padding"> 
   
-  <h1>QueerHealth</h1>
-  <h2>
-    Find safe doctors for you.
-  </h2>
+  <div class="welcome ion-text-center">
+    <img src="./assets/icons/gem-rainbow.png" width="58px" />
+    <br />
+    <h1 class="text-primary">
+      <strong>
+        QueerHealth
+      </strong> <br /> 
+      Find safe doctors for you.
+    </h1>  
+  </div>
 
-  
-
-  <h3> Login to have all the benefits!</h3>
-
+  <h3 class="ion-margin-horizontal"> Login to have all the benefits!</h3>
   <ion-card class="login ion-text-center">
     <ion-card-header>
       <ion-avatar class="img-center">
@@ -30,10 +33,7 @@
     </ion-card-content>
   </ion-card>
   
-  
-  
-
-  <h3>Latest added</h3>
+  <h3 class="ion-margin-horizontal">Our latest added doctors</h3>
   <ion-grid *ngFor="let cat of categories">
     <ion-row>
       <ion-col
