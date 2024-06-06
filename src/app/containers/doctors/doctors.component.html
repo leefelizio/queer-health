@@ -21,28 +21,17 @@
       Filter doctors by specialty
     </h4>
 
-    <ion-segment>
-      <ion-segment-button *ngFor="let cat of categories" (click)="selectedCategorie = cat;">
-        <ion-label [color]="selectedCategorie.title === cat.title ? 'primary' : ''">
-          {{ cat.title }}
-        </ion-label>
-      </ion-segment-button>
-    </ion-segment>
-
-    <br />
-
-    <!-- WIP Select -->
-
     <ion-list>
       <ion-item>
         <ion-select
-          label="Specialty"
-          placeholder="City"
+        (ionChange)="filterBySpecialty($event)"
+          label="Specialties"
+          placeholder="Select specialties"
           [multiple]="true"
         >
           <ion-select-option 
-            *ngFor="let cat of categories" 
-            [value]="cat.title">
+            *ngFor="let cat of allCategories" 
+            [value]="cat.uuid">
             {{ cat.title }}
           </ion-select-option>
         </ion-select>
@@ -54,21 +43,19 @@
     </h4>
     <ion-list>
       <ion-item>
-        <ion-select label="City" placeholder="City" [multiple]="true">
+        <ion-select (ionChange)="filterByCity($event)" label="Cities" placeholder="Select cities" [multiple]="true">
           <ion-select-option 
+            *ngFor="let city of cities"
             [value]="city">
-            <!-- {{city.name}} -->
+            {{city.name}}
           </ion-select-option>
         </ion-select>
       </ion-item>
     </ion-list>
-  <!-- / WIP Select -->
-
   </div>
 
-
   <div *ngIf="categories">
-    <ion-grid *ngFor="let cat of categories | filterByCategory : selectedCategorie">
+    <ion-grid *ngFor="let cat of categories">
       <ion-row>
         <ion-col
           class="ion-text-center ion-margin-vertical"
