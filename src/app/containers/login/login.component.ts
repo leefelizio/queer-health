@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { Auth, GoogleAuthProvider, signInWithPopup } from '@angular/fire/auth';
-import { Router } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 import { IonCard, IonCardHeader, IonAvatar, IonCardTitle, IonCardSubtitle, 
           IonCardContent, IonButton, IonHeader, IonToolbar, IonTitle, IonContent 
         } from '@ionic/angular/standalone';
@@ -20,7 +20,11 @@ import { IonCard, IonCardHeader, IonAvatar, IonCardTitle, IonCardSubtitle,
     IonCardSubtitle, 
     IonCardContent, 
     IonButton, 
-    IonHeader, IonToolbar, IonTitle, IonContent
+    IonHeader,
+    IonToolbar,
+    IonTitle,
+    IonContent,
+    RouterLink
   ]
 })
 export class LoginComponent {
