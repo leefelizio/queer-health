@@ -1,10 +1,8 @@
 import { Routes } from '@angular/router';
-import { dataResolver } from './resolvers/data.resolver';
 import { DetailComponent } from './containers/detail/detail.component';
 import { isAuthGuard } from './guards/is-auth.guard';
 import { NotFoundComponent } from './containers/not-found/not-found.component';
 import { LoginComponent } from './containers/login/login.component';
-import { isNotAuthGuard } from './guards/is-not-auth.guard';
 import { TabsComponent } from './containers/tabs/tabs.component';
 
 export const routes: Routes = [
@@ -45,7 +43,6 @@ export const routes: Routes = [
           component: DetailComponent
         }
       ],
-      // canActivate: [isAuthGuard],
     },
     {
       path: '404',
