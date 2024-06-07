@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Auth, GoogleAuthProvider } from '@angular/fire/auth';
+import { Auth, GoogleAuthProvider, user } from '@angular/fire/auth';
 import { Router, RouterLink } from '@angular/router';
 import { signInWithPopup } from '@firebase/auth';
 import { IonHeader, IonToolbar, IonTitle, IonContent, IonItem, IonLabel,
@@ -13,6 +13,7 @@ import { AsyncPipe, CommonModule } from '@angular/common';
 import { SignInComponent } from '../../sign-in/sign-in.component';
 import { WelcomeComponent } from '../../components/welcome/welcome.component';
 import { IsAuthService } from '../../services/auth.service';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-home',
@@ -53,15 +54,12 @@ export class HomeComponent {
 
   constructor(
     apiService: ApiService,
-    private readonly _router: Router,
-    private readonly _auth: Auth,
     public _isAuth:IsAuthService    
     ) { 
     // get cats 
     apiService.getData().then((database) => {
       this.categories = database.data;
     });
-
   
   }
 }

@@ -12,16 +12,6 @@
     headline="Sign-in to have all the benefits!"  
   ></app-sign-in>
 
-  <h3 class="login">
-
-    Hello 
-    
-  </h3>
-
-  <pre>
-    {{_isAuth.currentUser$|async|json}} <br />
-  </pre>
-  
   <h3 class="ion-margin-horizontal">Our latest added doctors</h3>
 
   <ion-grid *ngFor="let cat of categories">

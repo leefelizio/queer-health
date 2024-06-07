@@ -70,7 +70,7 @@
                   (click)="toggleFavorite(professional);"
                 > 
                   <img
-                    [class]="!(_isAuth.currentUser$|async) ? 'svg' : ''"
+                    [class]="(_isAuth.currentUser$|async) ? 'svg' : ''"
                     aria-label="Add it to my favorites"
                     [src]="(favs$| async | isFavorite: professional)  ? './assets/icons/gem-heart.png' : 'assets/icons/heart-outline.svg'"
                     width="32"
